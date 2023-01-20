@@ -28,7 +28,7 @@ Pour pouvoir faire des requêtes (read et hisRead), nous allons utiliser les fon
 # Read
 Exemple dans Skyspark:  
 -   Par filtre:    "*readAll(site)*"  
--   Par id:        "*readAll(id==@p:equans:r:2493cd08-cc2deded)*" ou "*readAll(id==@2493cd08-cc2deded)*"  
+-   Par id:        "*readAll(id==@p:<projectName>:r:<deviceID>)*" ou "*readAll(id==@<deviceID>)*"  
 
 En fonction de la recherche qu'on veut faire, soit par id soit par filtre, on a 2 fonctions (qu'on verra dans la suite),  
 et ces 2 fonctions ont quelques paramètres en commun:
@@ -51,7 +51,7 @@ En plus des paramètres cités juste au dessus, il y a aussi:
 readbyfilter = api.readByFilter(  
     url         =   "URL SKYSPARK",  
     token       =   "token",  
-    project     =   "equans",  
+    project     =   "projectName",  
     filter      =   "point and gas",  
     limit       =   5,  
     contentType =   "application/json"  
@@ -69,8 +69,8 @@ En plus des paramètres cités juste au dessus, il y a aussi:
 readByID = api.readByID(  
     url         =   "URL SKYSPARK",  
     token       =   "token",  
-    project     =   "equans",  
-    id          =   "@2616102f-046d81e7",  
+    project     =   "projectName",  
+    id          =   "@2616102f-2616102f",  
     contentType =   "application/json"  
 )   
 
@@ -91,8 +91,8 @@ Cette fonction comprend les paramètres suivants:
 hisread = api.hisRead(  
     url         =   "URL SKYSPARK",  
     token       =   "token",  
-    project     =   "equans",  
-    id          =   "@2616102f-046d81e7",  
+    project     =   "projectName",  
+    id          =   "@2616102f-2616102f",  
     range       =   "2021-06-20, 2022-06-29",  
     contentType =   "application/json"  
 )
